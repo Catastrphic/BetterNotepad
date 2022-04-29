@@ -1,0 +1,74 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "CanvasLayer",
+"class": "SceneChanger",
+"language": "GDScript",
+"path": "res://SceneChanger2.gd"
+}, {
+"base": "CanvasLayer",
+"class": "SceneChanger1",
+"language": "GDScript",
+"path": "res://SceneChanger1.gd"
+} ]
+_global_script_class_icons={
+"SceneChanger": "",
+"SceneChanger1": ""
+}
+
+[application]
+
+config/name="Better Notepad"
+run/main_scene="res://Loading.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="BetterNotepad"
+boot_splash/image="res://Nothing.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.203922, 0.203922, 0.203922, 1 )
+config/icon="res://BetterNotepad.png"
+config/windows_native_icon="res://BetterNotepad.ico"
+
+[debug]
+
+settings/crash_handler/message="Please include this when reporting the bug on catastrophicdinosaur.com"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+window/size/test_width=800
+window/size/test_height=600
+window/handheld/orientation="sensor"
+
+[gui]
+
+theme/custom_font="res://ThemeStuff/new_dynamicfont.tres"
+
+[input]
+
+save={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 1, 1, 1, 0 )
+environment/default_environment="res://default_env.tres"
